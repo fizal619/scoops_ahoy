@@ -5,9 +5,10 @@
   "main": "main.js",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watchAll",
-    "server": "simplehttpserver",
-    "webpack:dev": "webpack -w --mode development",
+    "start:dev": "concurrently \"npm:watch*\"",
+    "watch:test": "jest --watchAll",
+    "watch:http": "cd dist && live-server",
+    "watch:js": "webpack -w --mode development",
     "webpack:prod": "webpack --mode production"
   },
   "keywords": [],
@@ -17,7 +18,10 @@
     "@babel/plugin-transform-modules-commonjs": "^7.8.3",
     "axios": "^0.19.2",
     "babel-jest": "^25.1.0",
+    "concurrently": "^5.1.0",
+    "embla-carousel": "^2.8.0",
     "jest": "^25.1.0",
+    "live-server": "^1.2.1",
     "simplehttpserver": "^0.3.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
