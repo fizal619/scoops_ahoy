@@ -14,5 +14,10 @@ jobs:
     - run: npm install
     - run: npm run webpack:prod
     - name: Deploy
-      run: git add dist -f && git commit -m "Deploy from Github Actions"
-    - run: git subtree push --prefix dist origin gh-pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v1
+      with:
+        target_branch: gh-pages
+        build_dir: dist
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
