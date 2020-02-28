@@ -12,7 +12,7 @@ jobs:
       with:
         node-version: 12.x
     - run: npm install
-    - run: npm run webpack-prod
+    - run: npm run webpack:prod
     - name: Deploy
       run: git add dist -f && git commit -m "Deploy from Github Actions"
     - run: git subtree push --prefix dist origin gh-pages
