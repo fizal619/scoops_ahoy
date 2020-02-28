@@ -32,7 +32,7 @@ body {
   font-family: 'Trade Winds';
   line-height: 100px;
   color: white;
-  font-size: 2.7em;
+  font-size: 2.5vw;
   letter-spacing: 2px;
 }
 
@@ -62,4 +62,51 @@ body {
   width: 100%;
   height: 500px;
   object-fit: contain;
+}
+
+#chat-head {
+  width: 150px;
+  position: fixed;
+  bottom: -20px;
+  transform: rotate(-45deg);
+  right: -70px;
+}
+
+#chat-head:hover {
+  width: 180px;
+  cursor: pointer;
+}
+
+#chat-window {
+  position: fixed;
+  width: 80%;
+  height: 50vh;
+  background: #073e1e;
+  top: 20vh;
+  border-radius: 5px;
+  left: 10%;
+  border-bottom: 5px;
+  overflow-y: scroll;
+}
+
+#chat-window input {
+  width: 80%;
+  position: fixed;
+  bottom: 20vh;
+  padding: 10px;
+  border-radius: 0 5px;
+  height: 10vh;
+}
+
+.chat-bubble {
+  background: whitesmoke;
+  padding: 5px 20px;
+  border-radius: 30px;
+  width: fit-content;
+  margin: 10px;
+}
+
+.chat-bubble.user {
+  clear: both;
+  float: right;
 }
