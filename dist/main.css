@@ -87,26 +87,46 @@ body {
   left: 10%;
   border-bottom: 5px;
   overflow-y: scroll;
+  display: none;
 }
 
-#chat-window input {
+#chat-input {
+  left: 10%;
   width: 80%;
   position: fixed;
   bottom: 20vh;
   padding: 10px;
   border-radius: 0 5px;
   height: 10vh;
+  display: none;
 }
 
 .chat-bubble {
-  background: whitesmoke;
+  background: #b51b23;
+  color: white;
   padding: 5px 20px;
   border-radius: 30px;
   width: fit-content;
   margin: 10px;
+  clear: both;
+  float: right;
 }
 
 .chat-bubble.user {
-  clear: both;
-  float: right;
+  color: black;
+  background-color: whitesmoke;
+}
+
+#close {
+  border-radius: 50%;
+  width: 40px;
+  margin: 10px;
+  position: fixed;
+  background: white;
+  z-index: 10;
+}
+
+#close:hover {
+  width: 45px;
+  cursor: pointer;
 }
