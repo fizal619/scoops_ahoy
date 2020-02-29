@@ -12,6 +12,8 @@ jobs:
       with:
         node-version: 12.x
     - run: npm install
+    - name: Run Tests
+      run: npm run test
     - run: npm run webpack:prod
     - name: Deploy
       if: success() && github.ref == 'refs/heads/master'
